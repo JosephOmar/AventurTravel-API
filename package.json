@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server-postgre.js",
     "dev": "nodemon app.js"
   },
   "keywords": [],
