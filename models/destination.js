@@ -6,7 +6,8 @@ config()
 const pgp = pgPromise({})
 
 const cliente = pgp({
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: true
 })
 
 export class DestinationModel {
