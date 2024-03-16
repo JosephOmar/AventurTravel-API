@@ -1,120 +1,21 @@
 GET http://localhost:1235/destinations
 
 ###
-GET http://localhost:1235/destinations?tourOption=Prueba3
+GET http://localhost:1235/destinations?slug=weekend
 
 ###
-GET http://localhost:1235/destinations/ea7873d8-f21d-4c43-9278-1ce86477575b
+GET http://localhost:1235/destinations/1c694f60-25f8-46a4-87c5-48c179595fab
 ###
 POST http://localhost:1235/destinations
 Content-Type:  application/json
-
-{
-  "tourOption": "Prueba2",
-  "slug": "tour-aventura-cuzco",
-  "title": "Aventura en la cuzco",
-  "name": "Aventura en la cuzco",
-  "imgSlider": [
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg"
-  ],
-  "description": "Explora la selva profunda y descubre paisajes increíbles y vida salvaje.",
-  "timeTravel": "5 días",
-  "itinerary": [
-    "Día 1: Caminata por la selva.",
-    "Día 2: Río y cascadas.",
-    "Día 3: Expedición en canoa.",
-    "Día 4: Observación de aves.",
-    "Día 5: Retorno."
-  ],
-  "considerations": [
-    "Lleva ropa cómoda y repelente de insectos.",
-    "Lleva cámara fotografica"
-  ],
-  "additional": [
-    "Tour incluye guía especializado y alojamiento en cabañas rústicas.",
-    "Se proporcionan comidas durante toda la estadía."
-  ],
-  "price": 350,
-  "imgCarousel": [
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg"
-  ],
-  "comments": [
-    {
-      "img": "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-      "name": "Luisa Martínez",
-      "description": "La experiencia en la selva fue emocionante. ¡Definitivamente la recomiendo!"
-    },
-    {
-      "img": "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-      "name": "Carlos Rodríguez",
-      "description": "Los paisajes son impresionantes. ¡No te puedes perder este tour!"
-    },
-    {
-      "img": "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-      "name": "Juan Perez",
-      "description": "Los paisajes son impresionantes. ¡No te puedes perder este tour!"
-    }
-  ]
-}
+###
+DELETE http://localhost:1235/destinations/1fde4080-4ced-460a-a966-6efb1897ac11
 
 ###
-DELETE http://localhost:1235/destinations/32869991-c941-4119-ad48-6e8b69499797
-
-###
-PATCH http://localhost:1235/destinations/912cd1f1-1c33-4c1c-8762-d9f2ec01a3a8
+PATCH http://localhost:1235/destinations/1c694f60-25f8-46a4-87c5-48c179595fab
 Content-Type:  application/json
 
 {
-  "tourOption": "Prueba3",
-  "slug": "tour-aventura-Miami",
-  "title": "Aventura en la Miami Actualizado",
-  "name": "Aventura en la Miami",
-  "imgSlider": [
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg"
-  ],
-  "description": "Explora la selva profunda y descubre paisajes increíbles y vida salvaje.",
-  "timeTravel": "5 días",
-  "itinerary": [
-    "Día 1: Caminata por la selva.",
-    "Día 2: Río y cascadas.",
-    "Día 3: Expedición en canoa.",
-    "Día 4: Observación de aves."
-  ],
-  "considerations": [
-    "Lleva ropa cómoda y repelente de insectos.",
-    "Lleva cámara fotografica",
-    "Lleva globitos"
-  ],
-  "additional": [
-    "Tour incluye guía especializado y alojamiento en cabañas rústicas.",
-    "Se proporcionan comidas durante toda la estadía."
-  ],
-  "price": 350,
-  "imgCarousel": [
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-    "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg"
-  ],
-  "comments": [
-    {
-      "img": "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-      "name": "Luisa Martínez",
-      "description": "La experiencia en la selva fue emocionante. ¡Definitivamente la recomiendo!"
-    },
-    {
-      "img": "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-      "name": "Carlos Rodríguez",
-      "description": "Los paisajes son impresionantes. ¡No te puedes perder este tour!"
-    },
-    {
-      "img": "https://i.pinimg.com/736x/4b/08/44/4b0844711823f9755bacbb0cb05c4489.jpg",
-      "name": "July Valentino",
-      "description": "Los paisajes son impresionantes. ¡No te puedes perder este tour!"
-    }
-  ]
+  "slug": "chiclayo"
 }
 

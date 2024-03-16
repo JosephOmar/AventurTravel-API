@@ -5,16 +5,16 @@ const destinationsSchema = z.object({
   slug: z.string(),
   title: z.string(),
   name: z.string(),
-  imgSlider: z.array(z.string().url()),
+  imgSlider: z.array(z.string()),
   description: z.string(),
   timeTravel: z.string(),
   itinerary: z.array(z.string()),
   considerations: z.array(z.string()),
   additional: z.array(z.string()),
   price: z.number().int().positive(),
-  imgCarousel: z.array(z.string().url()),
+  imgCarousel: z.array(z.string()),
   comments: z.array(z.object({
-    img: z.string().url(),
+    img: z.string(),
     name: z.string(),
     description: z.string()
   }))

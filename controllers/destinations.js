@@ -7,7 +7,8 @@ export class DestinationController {
 
   getAll = async (req, res) => {
     const { tourOption } = req.query
-    const destination = await this.destinationModel.getAll({ tourOption })
+    const { slug } = req.query
+    const destination = await this.destinationModel.getAll({ tourOption, slug })
     res.json(destination)
   }
 
@@ -47,6 +48,7 @@ export class DestinationController {
     const { id } = req.params
 
     const updateDestination = await this.destinationModel.update({ id, input: result.data })
+    console.log(updateDestination)
     if (!updateDestination) return res.status(404).json({ message: 'Destination not found' })
     return res.json(updateDestination)
   }

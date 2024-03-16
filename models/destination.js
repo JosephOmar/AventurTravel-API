@@ -11,7 +11,7 @@ const cliente = pgp({
 })
 
 export class DestinationModel {
-  static async getAll ({ tourOption }) {
+  static async getAll ({ tourOption, slug }) {
     try {
       let queryString = `
       SELECT
@@ -39,9 +39,15 @@ export class DestinationModel {
 
       const values = []
 
-      if (tourOption) {
-        queryString += ' WHERE d.tourOption = $1'
-        values.push(tourOption)
+      if (tourOption && slug) {
+        queryString += ' WHERE d.tourOption ILIKE $1 AND d.slug ILIKE $2'
+        values.push(`%${tourOption}%`, `%${slug}%`)
+      } else if (tourOption) {
+        queryString += ' WHERE d.tourOption ILIKE $1'
+        values.push(`%${tourOption}%`)
+      } else if (slug) {
+        queryString += ' WHERE d.slug ILIKE $1'
+        values.push(`%${slug}%`)
       }
 
       queryString += ' GROUP BY d.id'
@@ -164,6 +170,8 @@ export class DestinationModel {
       const findDestination = await cliente.query(`
         SELECT * FROM destinations WHERE id = $1
       `, id)
+      console.log(findDestination)
+      console.log('xddd')
       if (findDestination.length === 0) return false
 
       const {
