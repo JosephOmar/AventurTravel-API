@@ -1,22 +1,30 @@
 import z from 'zod'
 
 const destinationsSchema = z.object({
-  tourOption: z.string(),
-  slug: z.string(),
   title: z.string(),
-  name: z.string(),
+  descriptionTitle: z.string(),
+  slug: z.string(),
   imgSlider: z.array(z.string()),
-  description: z.string(),
+  descriptionGeneral: z.string(),
   timeTravel: z.string(),
   itinerary: z.array(z.string()),
+  travelDetails: z.array(z.string()),
   considerations: z.array(z.string()),
-  additional: z.array(z.string()),
-  price: z.number().int().positive(),
-  imgCarousel: z.array(z.string()),
-  comments: z.array(z.object({
-    img: z.string(),
+  additionalServices: z.array(z.string()),
+  imgSliderSecondary: z.array(z.string()),
+  sectionPrimary: z.string(),
+  sectionSecondary: z.string(),
+  price: z.array(z.object({
+    currency: z.string(),
+    amount: z.number(),
+    includedServices: z.array(z.string()),
+    notIncludedServices: z.array(z.string())
+  })),
+  comment: z.array(z.object({
     name: z.string(),
-    description: z.string()
+    imgProfile: z.string(),
+    content: z.string(),
+    date: z.string()
   }))
 })
 

@@ -4,18 +4,98 @@ GET http://localhost:1235/destinations
 GET http://localhost:1235/destinations?slug=weekend
 
 ###
-GET http://localhost:1235/destinations/1c694f60-25f8-46a4-87c5-48c179595fab
+GET http://localhost:1235/destinations/c10dc8f3-8c9f-45d3-b6ca-26e78ee3e84f
 ###
 POST http://localhost:1235/destinations
 Content-Type:  application/json
-###
-DELETE http://localhost:1235/destinations/1fde4080-4ced-460a-a966-6efb1897ac11
+
+{
+    "title": "Huaraz3",
+    "descriptionTitle": "Sumérgete en la Tradición Ancashina",
+    "slug": "Huaraz3",
+    "imgSlider": [
+      "Huaraz.jpg",
+      "Huaraz.jpg",
+      "Huaraz.jpg"
+    ],
+    "descriptionGeneral": "Kyoto es el corazón cultural de Japón, lleno de templos, jardines y tradiciones centenarias.",
+    "timeTravel": "4 días",
+    "itinerary": [
+      "Día 1: Llegada y visita al Templo Kinkaku-ji.",
+      "Día 2: Paseo por el Bosque de Bambú y el Templo Tenryu-ji.",
+      "Día 3: Excursión a Nara.",
+      "Día 4: Tour por el Castillo de Nijo y el Templo Kiyomizu-dera."
+    ],
+    "travelDetails": [
+      "Vuelo ida y vuelta desde Tokio.",
+      "Hospedaje en ryokan tradicional.",
+      "Pases de transporte público para la ciudad."
+    ],
+    "considerations": [
+      "Comidas no incluidas.",
+      "Entradas a atracciones adicionales."
+    ],
+    "additionalServices": [
+      "Ceremonia del té.",
+      "Clase de caligrafía japonesa."
+    ],
+    "imgSliderSecondary": [
+      "kyoto_sec1.jpg",
+      "kyoto_sec2.jpg"
+    ],
+    "sectionPrimary": "Cultura",
+    "sectionSecondary": "Naturaleza",
+    "price": [
+    {
+        "currency": "PEN",
+        "amount": 400,
+        "includedServices": [
+            "Hospedaje tradicional",
+            "Desayuno"
+        ],
+        "notIncludedServices": [
+            "Cenas",
+            "Transporte interno"
+        ]
+    }
+],
+    "comment": [
+      {
+        "name": "Pablo",
+        "imgProfile": "pablo_profile.jpg",
+        "content": "La Torre Eiffel iluminada por la noche es una vista que nunca olvidaré.",
+        "date": ""
+      },
+      {
+        "name": "Emily",
+        "imgProfile": "emily_profile.jpg",
+        "content": "Sydney es el destino perfecto para los amantes de la naturaleza y la aventura.",
+        "date": ""
+      }
+    ]
+}
 
 ###
-PATCH http://localhost:1235/destinations/1c694f60-25f8-46a4-87c5-48c179595fab
+DELETE http://localhost:1235/destinations/2b68f6d5-9781-47e3-9647-1ae5eeaaf3dc
+
+###
+PATCH http://localhost:1235/destinations/c10dc8f3-8c9f-45d3-b6ca-26e78ee3e84f
 Content-Type:  application/json
 
 {
-  "slug": "chiclayo"
+  "comment": [
+      {
+        "name": "Juan Perez",
+        "imgProfile": "Juan_Perez.jpg",
+        "content": "La Torre Eiffel iluminada por la noche es una vista que nunca olvidaré.",
+        "date": "2024-03-18T21:53:03"
+      },
+      {
+        "name": "Emily Fuentes",
+        "imgProfile": "Emily_Fuentes.jpg",
+        "content": "Sydney es el destino perfecto para los amantes de la naturaleza y la aventura.",
+        "date": "2024-03-18T21:53:03"
+      }
+    ]
 }
 

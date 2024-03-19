@@ -6,9 +6,9 @@ export class DestinationController {
   }
 
   getAll = async (req, res) => {
-    const { tourOption } = req.query
-    const { slug } = req.query
-    const destination = await this.destinationModel.getAll({ tourOption, slug })
+    const { sectionPrimary } = req.query
+    const { sectionSecondary } = req.query
+    const destination = await this.destinationModel.getAll({ sectionPrimary, sectionSecondary })
     res.json(destination)
   }
 
